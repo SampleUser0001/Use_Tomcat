@@ -1,0 +1,12 @@
+version: '3'
+services:
+  tomcat:
+    image: tomcat:8.5
+    container_name: tomcat_8.5
+    ports: 
+      - "8080:8080"
+    volumes:
+      - ./tomcat/webapps:/usr/local/tomcat/webapps
+#      - ./tomcat/webapps.dist:/usr/local/tomcat/webapps.dist
+      - ./tomcat/logs:/usr/local/tomcat/logs
+      - ./tomcat/conf:/usr/local/tomcat/conf
